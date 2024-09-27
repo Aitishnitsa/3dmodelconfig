@@ -1,4 +1,5 @@
 import { OrbitControls, Stage } from '@react-three/drei';
+import { Roof } from './Roof';
 
 export const Experience = () => {
   return (
@@ -14,11 +15,8 @@ export const Experience = () => {
         }}
         adjustCamera={2.5}
       >
+        <Roof />
         <OrbitControls />
-        <mesh castShadow>
-          <meshNormalMaterial />
-          <boxGeometry />
-        </mesh>
       </Stage>
     </>
   );
