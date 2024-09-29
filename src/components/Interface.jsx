@@ -1,8 +1,9 @@
 import { Box, FormControl, FormLabel, Slider, Stack } from '@mui/material';
 import { useConfigurator } from '../context/Configurator';
+
 export const Interface = () => {
   const { roofLength, setRoofLength, roofWidth, setRoofWidth } =
-    useConfigurator;
+    useConfigurator();
 
   return (
     <Box
@@ -16,15 +17,7 @@ export const Interface = () => {
       p={3}
     >
       <Stack spacing={3}>
-        <Box
-          p={3}
-          sx={{
-            background: 'rgba(255, 255, 255)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-            backdropFilter: 'blur(10px)',
-          }}
-        >
+        <Box className="container" p={3}>
           <FormControl>
             <FormLabel
               sx={{
@@ -46,15 +39,7 @@ export const Interface = () => {
             />
           </FormControl>
         </Box>
-        <Box
-          p={3}
-          sx={{
-            background: 'rgba(255, 255, 255)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-            backdropFilter: 'blur(10px)',
-          }}
-        >
+        <Box className="container" p={3}>
           <FormControl>
             <FormLabel
               sx={{

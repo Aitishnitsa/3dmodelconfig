@@ -1,7 +1,9 @@
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Roof } from './Roof';
+import { useConfigurator } from '../context/Configurator';
 
 export const Experience = () => {
+  const { roofWidth, roofLength } = useConfigurator();
   return (
     <>
       <Stage
