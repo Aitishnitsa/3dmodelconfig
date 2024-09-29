@@ -1,6 +1,9 @@
 import { OrbitControls, Stage } from '@react-three/drei';
+import { useConfigurator } from '../context/Configurator';
+import { Roof } from './Roof';
 
 export const Experience = () => {
+  const { roofWidth, roofLength } = useConfigurator();
   return (
     <>
       <Stage
@@ -14,11 +17,8 @@ export const Experience = () => {
         }}
         adjustCamera={2.5}
       >
+        <Roof />
         <OrbitControls />
-        <mesh castShadow>
-          <meshNormalMaterial />
-          <boxGeometry />
-        </mesh>
       </Stage>
     </>
   );
